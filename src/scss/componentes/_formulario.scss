@@ -7,15 +7,17 @@
 }
 .campo{
     display: flex;
+    flex-direction: column;
     margin-bottom: 2rem;
-    align-items: center;
+    
     label{
-        flex: 0 0 10rem;
+        flex: 1rem;
+        margin: 1rem;
     }
     input{
         flex: 1;
         border:none;
-        padding: calc(v.$separacion /4);
+        padding: 1.5rem;
         border-radius: 1rem;
     }
 }
