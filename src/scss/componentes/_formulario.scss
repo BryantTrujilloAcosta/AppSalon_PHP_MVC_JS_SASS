@@ -3,6 +3,7 @@
 
 .formulario{
     width: 100%;
+    align-items: center;
 }
 .campo{
     display: flex;
@@ -15,5 +16,9 @@
         flex: 1;
         border:none;
         padding: calc(v.$separacion /4);
+        border-radius: 1rem;
     }
 }
+
+
+
