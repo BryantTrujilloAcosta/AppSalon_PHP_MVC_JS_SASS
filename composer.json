@@ -5,7 +5,8 @@
         "psr-4": {
             "MVC\\": "./",
             "Controllers\\": "./controllers/",
-            "Model\\": "./models/"
+            "Model\\": "./models/",
+            "Classes\\": "./classes/"
         }
     },
     "authors": [
@@ -14,5 +15,7 @@
             "email": "l21170495@culiacan.tecnm.mx"
         }
     ],
-    "require": {}
+    "require": {
+        "phpmailer/phpmailer": "^6.11"
+    }
 }

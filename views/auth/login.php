@@ -8,7 +8,7 @@
             type="email"
             id="email"
             name="email"
-            placeholder="Tu Email"
+            placeholder="Tu Correo"
         />
     </div>
     <div class="campo">
@@ -17,7 +17,7 @@
             type="password"
             id="password"
             name="password"
-            placeholder="Tu Password"
+            placeholder="Tu Contraseña"
         />
     </div>
         <input type="submit" class="boton" value="Iniciar Sesión">
