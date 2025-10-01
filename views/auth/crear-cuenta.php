@@ -26,11 +26,12 @@
     </div>
     <div class="campo">
         <label for="telefono">Teléfono</label>
-        <input 
+        <input
             type="tel"
             id="telefono"
             name="telefono"
             placeholder="Tu Teléfono"
+            maxlength="10"
             value="<?php echo s($usuario->telefono); ?>"
         />
     </div>

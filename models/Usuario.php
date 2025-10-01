@@ -25,8 +25,8 @@ class Usuario extends ActiveRecord{
         $this ->email = $args['email'] ?? '';
         $this ->password = $args['password'] ?? '';
         $this ->telefono = $args['telefono'] ?? '';
-        $this ->admin = $args['admin'] ?? null;
-        $this ->confirmado = $args['confirmado'] ?? null;
+        $this ->admin = $args['admin'] ?? 0;
+        $this ->confirmado = $args['confirmado'] ?? 0;
         $this ->token = $args['token'] ?? '';
     }
 
@@ -40,6 +40,9 @@ class Usuario extends ActiveRecord{
         }
         if(!$this->telefono){
             self::$alertas['error'][] = 'El Teléfono es Obligatorio';
+        }
+        if(!preg_match('/[0-9]{10}/',$this->telefono)){
+            self::$alertas['error'][] = 'El Teléfono no es válido, debe tener 10 dígitos';
         }
         if(!$this->email){
             self::$alertas['error'][] = 'El Correo es Obligatorio';
