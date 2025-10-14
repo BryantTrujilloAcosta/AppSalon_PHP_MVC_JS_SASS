@@ -72,13 +72,18 @@ class ActiveRecord {
 
     // Sanitizar los datos antes de guardarlos en la BD
     public function sanitizarAtributos() {
-        $atributos = $this->atributos();
-        $sanitizado = [];
-        foreach($atributos as $key => $value ) {
+    $atributos = $this->atributos();
+    $sanitizado = [];
+    foreach($atributos as $key => $value ) {
+        // Verificar que el valor no sea null antes de sanitizar
+        if ($value !== null) {
             $sanitizado[$key] = self::$db->escape_string($value);
+        } else {
+            $sanitizado[$key] = '';
         }
-        return $sanitizado;
     }
+    return $sanitizado;
+}
 
     // Sincroniza BD con Objetos en memoria
     public function sincronizar($args=[]) { 

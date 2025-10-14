@@ -16,5 +16,8 @@
     "gulp-terser": "^2.1.0",
     "sass": "^1.75.0",
     "sharp": "^0.33.5"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.24.1"
   }
 }
